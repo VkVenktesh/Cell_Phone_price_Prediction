@@ -25,16 +25,16 @@ with col1:
     with input_col1:
         battery_power = st.slider('Battery (mAh)', 500, 2000, 1000)
         fc = st.slider('Front Camera (MP)', 0, 20, 10)
-        int_memory = st.slider('Internal Memory (GB)', 2, 128, 64)
+        int_memory = st.slider('ROM (GB)', 2, 128, 64)
         mobile_wt = st.slider('Mobile Weight (g)', 80, 200, 150)
-        four_g = st.selectbox("4G", ["No", "Yes"])
+        four_g = st.selectbox("5G", ["No", "Yes"])
 
     with input_col2:
         pc = st.slider('Primary Camera (MP)', 0, 20, 10)
         ram = st.slider("RAM (MB)", 256, 8192, 2048)
-        px_height = st.slider('Pixel Resolution Height', 0, 2000, 1000)
-        px_width = st.slider('Pixel Resolution Width', 0, 2000, 1000)
-        talk_time = st.slider('Talk Time (hours)', 2, 20, 10)
+        px_height = st.slider('Mobile Height', 0, 2000, 1000)
+        px_width = st.slider('Mobile Width', 0, 2000, 1000)
+        talk_time = st.slider('Battery Standby (hours)', 2, 20, 10)
 
         
 
@@ -47,7 +47,7 @@ with col2:
     
 
     # Define price range dictionary
-    price_range = {0: "Low Cost", 1: "Medium Cost", 2: "High Cost", 3: "Very High Cost"}
+    price_range = {0: "Economy", 1: "Moderate", 2: "Premiumt", 3: "Ultra-Premium"}
 
     # Predict price range
     if st.button('Predict Price Range'):
